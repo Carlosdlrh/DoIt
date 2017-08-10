@@ -12,7 +12,10 @@ class TasksViewController: UIViewController, UITableViewDelegate, UITableViewDat
 
     @IBOutlet weak var tableView: UITableView!
     
+    //Crear directamente el arreglo
     var tasks: [Task] = []
+    //Selecionar direcamente la linea y enumerarla
+    var selectedIndex = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,6 +45,14 @@ class TasksViewController: UIViewController, UITableViewDelegate, UITableViewDat
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        //Obtener numero
+        selectedIndex = indexPath.row
+        
+        let task = tasks[indexPath.row]
+        performSegue(withIdentifier: "selectedTaskSegue", sender: task)
+    }
+    
     func makeTask() -> [Task]{
         
         let task1 = Task()
@@ -64,8 +75,19 @@ class TasksViewController: UIViewController, UITableViewDelegate, UITableViewDat
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let nextVC = segue.destination as! CreateTaskViewController
-        nextVC.previousVC = self
+        
+        //Diferenciador de caminos "Segue" con identificador if
+        if segue.identifier == "addSegue"{
+            let nextVC = segue.destination as! CreateTaskViewController
+                nextVC.previousVC = self
+        }
+        
+        if segue.identifier == "selectedTaskSegue"{
+            let nextVC = segue.destination as! CompleteTaskViewController
+                nextVC.tarea = sender as! Task
+                nextVC.previousVC = self
+        }
+        
     }
     
     //Nunca se va a usar -----------------------
