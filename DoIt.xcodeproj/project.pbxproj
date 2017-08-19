@@ -13,7 +13,6 @@
 		816E6BEC1F33B30D007B7573 /* DoIt.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 816E6BEA1F33B30D007B7573 /* DoIt.xcdatamodeld */; };
 		816E6BEE1F33B30D007B7573 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 816E6BED1F33B30D007B7573 /* Assets.xcassets */; };
 		816E6BF11F33B30D007B7573 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 816E6BEF1F33B30D007B7573 /* LaunchScreen.storyboard */; };
-		816E6BF91F33F3E2007B7573 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 816E6BF81F33F3E2007B7573 /* Task.swift */; };
 		816E6BFB1F340407007B7573 /* CreateTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 816E6BFA1F340407007B7573 /* CreateTaskViewController.swift */; };
 		81F274B41F3CFF87008C5185 /* CompleteTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F274B31F3CFF87008C5185 /* CompleteTaskViewController.swift */; };
 /* End PBXBuildFile section */
@@ -27,7 +26,6 @@
 		816E6BED1F33B30D007B7573 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		816E6BF01F33B30D007B7573 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		816E6BF21F33B30D007B7573 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		816E6BF81F33F3E2007B7573 /* Task.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		816E6BFA1F340407007B7573 /* CreateTaskViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateTaskViewController.swift; sourceTree = "<group>"; };
 		81F274B31F3CFF87008C5185 /* CompleteTaskViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompleteTaskViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -64,10 +62,9 @@
 			children = (
 				816E6BE31F33B30D007B7573 /* AppDelegate.swift */,
 				816E6BE51F33B30D007B7573 /* TasksViewController.swift */,
+				816E6BFA1F340407007B7573 /* CreateTaskViewController.swift */,
 				81F274B31F3CFF87008C5185 /* CompleteTaskViewController.swift */,
 				816E6BE71F33B30D007B7573 /* Main.storyboard */,
-				816E6BFA1F340407007B7573 /* CreateTaskViewController.swift */,
-				816E6BF81F33F3E2007B7573 /* Task.swift */,
 				816E6BED1F33B30D007B7573 /* Assets.xcassets */,
 				816E6BEF1F33B30D007B7573 /* LaunchScreen.storyboard */,
 				816E6BF21F33B30D007B7573 /* Info.plist */,
@@ -108,6 +105,7 @@
 				TargetAttributes = {
 					816E6BDF1F33B30D007B7573 = {
 						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = DAP93Y9V3D;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -148,7 +146,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				816E6BF91F33F3E2007B7573 /* Task.swift in Sources */,
 				816E6BEC1F33B30D007B7573 /* DoIt.xcdatamodeld in Sources */,
 				81F274B41F3CFF87008C5185 /* CompleteTaskViewController.swift in Sources */,
 				816E6BE61F33B30D007B7573 /* TasksViewController.swift in Sources */,
@@ -278,7 +275,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = DAP93Y9V3D;
 				INFOPLIST_FILE = DoIt/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Bonsai.DoIt;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -290,7 +289,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = DAP93Y9V3D;
 				INFOPLIST_FILE = DoIt/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Bonsai.DoIt;
 				PRODUCT_NAME = "$(TARGET_NAME)";
